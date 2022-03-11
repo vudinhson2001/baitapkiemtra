@@ -5,11 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+<input type="text" id="sta">
+<input type="text" id="stb">
+<input type="text" id="stc">
+<button onclick="tinh()">Ấn vào đây</button>
+<h1 id="kq"></h1>
 <script>
-    let a= +prompt("nhập a vào đây :")
-    let b= +prompt("nhập b vào đây :")
-    let c= +prompt("nhập c vào đây :")
-    let
+    let a = document.getElementById("sta");
+    let b = document.getElementById("stb");
+    let c = document.getElementById("stc");
+    let kq = document.getElementById("kq");
+
+    function tinh() {
+        let ca = a.value;
+        let cb = b.value;
+        let cc = c.value;
+        let rs = ""
+        if(ca + cb > cc && cc + cb > ca && ca + cc > cb) {
+            rs = "tam giác";
+            if (ca == cb && cb == cc) {
+                rs = "tam giác đều";
+            } else if(ca == cb || cb == cc || cc == ca ) {
+                rs = "tam giác cân";
+            }677++321/.,mn
+
+            if (ca * ca + cb * cb == cc * cc || ca * ca == cb * cb + cc * cc || ca * ca + cc * cc == cb * cb) {
+                rs = "tam giác vuông" ;
+            }
+        }
+        kq.innerHTML = rs;
+    }
 </script>
 
 </body>
